@@ -1,4 +1,4 @@
-package condicional_ternaria;
+package estrutura_condicional.condicional_ternaria;
 
 import java.util.Locale;
 import java.util.Scanner;
