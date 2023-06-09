@@ -1,4 +1,4 @@
-package estrutura_repetitiva;
+package estrutura_repetitiva.whille;
 
 import java.util.Scanner;
 
