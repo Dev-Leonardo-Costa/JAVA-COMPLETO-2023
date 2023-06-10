@@ -16,6 +16,7 @@ public class Exercicio06 {
             int segundo = i * i;
             int terceiro = i * i * i;
             System.out.printf("%d %d %d%n", primeiro, segundo, terceiro);
+
         }
 
         sc.close();
