@@ -1,4 +1,6 @@
-package exercicios.poo_aula69.exercicio03;
+package exercicios.poo.aula69.exercicio03;
+
+import exercicios.poo.aula69.exercicio03.Funcionario;
 
 import java.util.Locale;
 import java.util.Scanner;

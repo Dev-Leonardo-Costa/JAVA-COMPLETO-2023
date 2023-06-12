@@ -1,4 +1,6 @@
-package exercicios.poo_aula69.exercicio02;
+package exercicios.poo.aula69.exercicio02;
+
+import exercicios.poo.aula69.exercicio03.Retangulo;
 
 import java.util.Locale;
 import java.util.Scanner;

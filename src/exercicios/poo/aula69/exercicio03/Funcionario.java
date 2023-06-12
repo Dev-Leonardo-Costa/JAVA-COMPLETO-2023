@@ -1,4 +1,4 @@
-package exercicios.poo_aula69.exercicio03;
+package exercicios.poo.aula69.exercicio03;
 
 public class Funcionario {
 
