@@ -18,7 +18,17 @@ public class principal {
         System.out.print("Quantidade: ");
         produto.setQuantidade(sc.nextInt());
 
-        produto.qtdEmEstoque(produto);
+        System.out.println(produto);
+
+        System.out.print("Entre com um numero de produtos para ser adicionado ao estoque: ");
+        int add = sc.nextInt();
+        produto.addProduto(add);
+        System.out.println("Update "+ produto);
+
+        System.out.printf("Quantos produtos deseja remover:  ");
+        int remove = sc.nextInt();
+        produto.removeProtudos(remove);
+        System.out.println("Update " + produto);
 
         sc.close();
     }

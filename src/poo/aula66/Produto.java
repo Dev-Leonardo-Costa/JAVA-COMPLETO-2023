@@ -6,6 +6,8 @@ public class Produto {
     private double preco;
     private int quantidade;
 
+    public Produto() {
+    }
 
     public double totalEstoque() {
         double total = preco * quantidade;
@@ -20,14 +22,11 @@ public class Produto {
         this.quantidade -= qtd;
     }
 
-    public Produto() {
-    }
-
-    public void qtdEmEstoque(Produto produto){
-        System.out.println("Quantidade em Estoque");
-        System.out.println("Nome: " + produto.getNome());
-        System.out.println("Preço: " + produto.getPreco());
-        System.out.println("Quantidade: " + produto.getQuantidade());
+    public String toString() {
+        return "Dados do Produto " + nome +
+                ", R$" + String.format("%.2f", preco)
+                + ", Qtd: " + quantidade
+                + " Total: " + String.format("%.2f", totalEstoque());
     }
 
     public String getNome() {
