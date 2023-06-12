@@ -1,4 +1,4 @@
-package exercicios.aula63;
+package poo.aula63e64;
 
 import java.util.Locale;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package exercicios.aula63.aula64;
+package poo.aula63e64;
 
 public class Triangulo {
     private static double a;
