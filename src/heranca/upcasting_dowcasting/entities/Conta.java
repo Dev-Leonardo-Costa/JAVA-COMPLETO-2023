@@ -1,4 +1,4 @@
-package heranca.entities;
+package heranca.upcasting_dowcasting.entities;
 
 public class Conta {
 
@@ -10,10 +10,10 @@ public class Conta {
     public Conta() {
     }
 
-    public Conta(Integer numero, String titular, Double balance) {
+    public Conta(Integer numero, String titular, Double saldo) {
         this.numero = numero;
         this.titular = titular;
-        this.saldo = balance;
+        this.saldo = saldo;
     }
 
     public Integer getNumero() {
