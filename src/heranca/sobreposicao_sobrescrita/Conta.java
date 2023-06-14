@@ -1,4 +1,4 @@
-package heranca.upcasting_dowcasting.entities;
+package heranca.sobreposicao_sobrescrita;
 
 public class Conta {
 
