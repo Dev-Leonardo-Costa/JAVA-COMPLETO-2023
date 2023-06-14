@@ -1,6 +1,6 @@
-package heranca.sobreposicao_sobrescrita;
+package heranca.sobreposicao_sobrescrita.entities;
 
-public class ContaNegocio extends Conta {
+public final class ContaNegocio extends Conta {
 
     private double limiteEmprestimo;
 

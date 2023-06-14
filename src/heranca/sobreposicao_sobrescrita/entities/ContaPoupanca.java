@@ -1,6 +1,6 @@
-package heranca.sobreposicao_sobrescrita;
+package heranca.sobreposicao_sobrescrita.entities;
 
-public class ContaPoupanca extends Conta {
+public final class ContaPoupanca extends Conta {
 
     private Double taxaDeJuros;
 
