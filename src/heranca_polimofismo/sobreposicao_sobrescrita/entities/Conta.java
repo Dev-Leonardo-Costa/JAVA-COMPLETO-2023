@@ -1,4 +1,4 @@
-package heranca.sobreposicao_sobrescrita.entities;
+package heranca_polimofismo.sobreposicao_sobrescrita.entities;
 
 public class Conta {
 

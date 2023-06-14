@@ -1,8 +1,8 @@
-package heranca.sobreposicao_sobrescrita;
+package heranca_polimofismo.sobreposicao_sobrescrita;
 
-import heranca.upcasting_dowcasting.entities.Conta;
-import heranca.upcasting_dowcasting.entities.ContaNegocio;
-import heranca.upcasting_dowcasting.entities.ContaPoupanca;
+import heranca_polimofismo.upcasting_dowcasting.entities.Conta;
+import heranca_polimofismo.upcasting_dowcasting.entities.ContaNegocio;
+import heranca_polimofismo.upcasting_dowcasting.entities.ContaPoupanca;
 
 public class Aula158 {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package heranca.sobreposicao_sobrescrita.entities;
+package heranca_polimofismo.heranca.entities;
 
-public final class ContaNegocio extends Conta {
+public class ContaNegocio extends Conta {
 
     private double limiteEmprestimo;
 
@@ -12,8 +12,8 @@ public final class ContaNegocio extends Conta {
         this.limiteEmprestimo = limiteEmprestimo;
     }
 
-    public ContaNegocio(Integer numero, String titular, Double saldo, double limiteEmprestimo) {
-        super(numero, titular, saldo);
+    public ContaNegocio(Integer numero, String titular, Double balance, double limiteEmprestimo) {
+        super(numero, titular, balance);
         this.limiteEmprestimo = limiteEmprestimo;
     }
 
@@ -29,11 +29,5 @@ public final class ContaNegocio extends Conta {
         if (limiteEmprestimo <= valorEmprestimo) {
             saldo += valorEmprestimo - 10.0;
         }
-    }
-
-    @Override
-    public void saque(double valor) {
-        super.saque(valor);
-        saldo -= 2.0;
     }
 }

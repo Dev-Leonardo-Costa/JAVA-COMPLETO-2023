@@ -1,4 +1,4 @@
-package heranca.heranca.entities;
+package heranca_polimofismo.upcasting_dowcasting.entities;
 
 public class ContaNegocio extends Conta {
 
@@ -12,8 +12,8 @@ public class ContaNegocio extends Conta {
         this.limiteEmprestimo = limiteEmprestimo;
     }
 
-    public ContaNegocio(Integer numero, String titular, Double balance, double limiteEmprestimo) {
-        super(numero, titular, balance);
+    public ContaNegocio(Integer numero, String titular, Double saldo, double limiteEmprestimo) {
+        super(numero, titular, saldo);
         this.limiteEmprestimo = limiteEmprestimo;
     }
 

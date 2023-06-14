@@ -1,4 +1,4 @@
-package heranca.upcasting_dowcasting.entities;
+package heranca_polimofismo.heranca.entities;
 
 public class Conta {
 
@@ -10,10 +10,10 @@ public class Conta {
     public Conta() {
     }
 
-    public Conta(Integer numero, String titular, Double saldo) {
+    public Conta(Integer numero, String titular, Double balance) {
         this.numero = numero;
         this.titular = titular;
-        this.saldo = saldo;
+        this.saldo = balance;
     }
 
     public Integer getNumero() {
@@ -37,7 +37,7 @@ public class Conta {
     }
 
     public void saque(double valor) {
-        saldo -= valor + 5.0;
+        saldo -= valor;
     }
 
     public void depositar(double valor) {

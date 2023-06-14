@@ -1,8 +1,6 @@
-package heranca.upcasting_dowcasting.entities;
+package heranca_polimofismo.sobreposicao_sobrescrita.entities;
 
-import heranca.upcasting_dowcasting.entities.Conta;
-
-public class ContaNegocio extends Conta {
+public final class ContaNegocio extends Conta {
 
     private double limiteEmprestimo;
 
@@ -31,5 +29,11 @@ public class ContaNegocio extends Conta {
         if (limiteEmprestimo <= valorEmprestimo) {
             saldo += valorEmprestimo - 10.0;
         }
+    }
+
+    @Override
+    public void saque(double valor) {
+        super.saque(valor);
+        saldo -= 2.0;
     }
 }

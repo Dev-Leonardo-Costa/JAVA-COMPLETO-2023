@@ -1,4 +1,4 @@
-package heranca.upcasting_dowcasting.entities;
+package heranca_polimofismo.upcasting_dowcasting.entities;
 
 public class Aula157 {
     public static void main(String[] args) {

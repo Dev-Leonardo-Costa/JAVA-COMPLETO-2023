@@ -1,6 +1,6 @@
-package heranca.sobreposicao_sobrescrita.entities;
+package heranca_polimofismo.upcasting_dowcasting.entities;
 
-public final class ContaPoupanca extends Conta {
+public class ContaPoupanca extends Conta{
 
     private Double taxaDeJuros;
 
@@ -21,12 +21,8 @@ public final class ContaPoupanca extends Conta {
         this.taxaDeJuros = taxaDeJuros;
     }
 
-    public void atualizarSaldo() {
+    public void atualizarSaldo(){
         saldo += saldo * taxaDeJuros;
     }
 
-    @Override
-    public void saque(double valor) {
-        saldo -= valor;
-    }
 }
