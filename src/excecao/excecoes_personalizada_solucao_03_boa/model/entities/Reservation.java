@@ -14,9 +14,12 @@ public class Reservation {
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    public Reservation(Integer roomNumber, Date checkin, Date checkOut) {
+    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+        if (!checkOut.after(checkIn)) {
+            throw new DomainException("Erro dates!");
+        }
         this.roomNumber = roomNumber;
-        this.checkin = checkin;
+        this.checkin = checkIn;
         this.checkOut = checkOut;
     }
 
@@ -41,7 +44,7 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
-    public void updateDate(Date checkin, Date checkOut) throws DomainException{
+    public void updateDate(Date checkin, Date checkOut) {
 
         Date now = new Date();
 

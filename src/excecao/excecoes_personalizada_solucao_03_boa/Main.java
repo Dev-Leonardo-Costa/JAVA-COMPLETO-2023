@@ -38,6 +38,8 @@ public class Main {
             System.out.println("Date Invalid format");
         } catch (DomainException ex){
             System.out.println("Error in reservation!"+ ex.getMessage());
+        } catch (RuntimeException ex){
+            System.out.println("Unexpected error");
         }
 
         sc.close();
