@@ -37,6 +37,7 @@ public class SelllerDaoJDBC implements SellerDao {
 
     @Override
     public Seller findById(Integer id) {
+
         PreparedStatement statement = null;
         ResultSet resultSet = null;
 
@@ -53,17 +54,9 @@ public class SelllerDaoJDBC implements SellerDao {
             resultSet = statement.executeQuery();
             if (resultSet.next()) {
 
-                Department department = new Department();
-                department.setId(resultSet.getInt("DepartmentId"));
-                department.setName(resultSet.getString("DepName"));
+                Department department = instantiateDepartment(resultSet);
+                Seller obj = instantiateSeller(resultSet, department);
 
-                Seller obj = new Seller();
-                obj.setId(resultSet.getInt("Id"));
-                obj.setName(resultSet.getString("Name"));
-                obj.setEmail(resultSet.getString("Email"));
-                obj.setBirthDate(resultSet.getDate("BirthDate"));
-                obj.setBaseSalary(resultSet.getDouble("BaseSalary"));
-                obj.setDepartment(department);
                 return obj;
             }
 
@@ -81,5 +74,23 @@ public class SelllerDaoJDBC implements SellerDao {
     @Override
     public List<Seller> findAll() {
         return null;
+    }
+
+    private static Department instantiateDepartment(ResultSet resultSet) throws SQLException {
+        Department department = new Department();
+        department.setId(resultSet.getInt("DepartmentId"));
+        department.setName(resultSet.getString("DepName"));
+        return department;
+    }
+
+    private static Seller instantiateSeller(ResultSet resultSet, Department department) throws SQLException {
+        Seller obj = new Seller();
+        obj.setId(resultSet.getInt("Id"));
+        obj.setName(resultSet.getString("Name"));
+        obj.setEmail(resultSet.getString("Email"));
+        obj.setBirthDate(resultSet.getDate("BirthDate"));
+        obj.setBaseSalary(resultSet.getDouble("BaseSalary"));
+        obj.setDepartment(department);
+        return obj;
     }
 }
