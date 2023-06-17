@@ -7,9 +7,12 @@ import demo_dao_jdbc.model.factory.DaoFactory;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
-public class Program {
+public class ProgramSeller {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("========= Teste 1 Seller metodo findById ==========");
         SellerDao sellerDao = DaoFactory.createSellerDao();
@@ -37,10 +40,16 @@ public class Program {
         System.out.println("Sucesso insert: " + sellerNew.getId());
 
         System.out.println("========= Teste 5 Seller metodo update ==========");
-        seller = sellerDao.findById(1);
+        seller = sellerDao.findById(3);
         seller.setName("Costa");
         sellerDao.update(seller);
         System.out.println("Update completed!");
+
+        System.out.println("========= Teste 6 Seller metodo update ==========");
+        System.out.print("Digite o Id que deseja remover: ");
+        int id = sc.nextInt();
+        sellerDao.deleteById(id);
+        System.out.printf("O codigo %d removido sucesso!", id);
 
     }
 }
