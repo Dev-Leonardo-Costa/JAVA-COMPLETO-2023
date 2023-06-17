@@ -31,6 +31,10 @@ public class Program {
             System.out.println(sellerList);
         }
 
+        System.out.println("========= Teste 4 Seller metodo insert ==========");
+        Seller sellerNew = new Seller(null, "Eliomar Costa Silva", "elio@gmail.com", new Date(), 3000.0, department);
+        sellerDao.insert(sellerNew);
+        System.out.println("Sucesso insert: " + sellerNew.getId());
 
     }
 }

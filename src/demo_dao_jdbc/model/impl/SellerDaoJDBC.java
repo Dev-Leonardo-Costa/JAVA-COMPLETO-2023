@@ -6,10 +6,7 @@ import demo_dao_jdbc.model.entities.Department;
 import demo_dao_jdbc.model.entities.Seller;
 import projeto_com_jdbc.db.exceptions.DbException;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,6 +22,43 @@ public class SellerDaoJDBC implements SellerDao {
 
     @Override
     public void insert(Seller obj) {
+
+        PreparedStatement statement = null;
+        ResultSet rs = null;
+
+        try {
+
+            StringBuilder sb = new StringBuilder()
+                    .append("insert into seller(Name, Email, BirthDate, BaseSalary , DepartmentId) ")
+                    .append("values (?, ?, ?, ?, ?)");
+            statement = connection.prepareStatement(sb.toString(), Statement.RETURN_GENERATED_KEYS);
+
+            statement.setString(1, obj.getName());
+            statement.setString(2, obj.getEmail());
+            statement.setDate(3, new Date(obj.getBirthDate().getTime()));
+            statement.setDouble(4, obj.getBaseSalary());
+            statement.setInt(5, obj.getDepartment().getId());
+
+            int rowsEffected = statement.executeUpdate();
+
+            if (rowsEffected > 0) {
+
+                rs = statement.getGeneratedKeys();
+
+                if (rs.next()) {
+                    int id = rs.getInt(1);
+                    obj.setId(id);
+                }
+
+            } else {
+                throw new DbException("Unexcepected error! No rows affected!");
+            }
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(statement);
+        }
 
     }
 
