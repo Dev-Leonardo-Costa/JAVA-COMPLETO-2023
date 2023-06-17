@@ -1,4 +1,4 @@
-package projeto_com_jdbc.db;
+package projeto_com_jdbc.db.exceptions;
 
 public class DbException extends RuntimeException {
     public DbException(String message) {

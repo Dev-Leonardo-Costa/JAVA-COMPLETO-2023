@@ -1,5 +1,7 @@
 package projeto_com_jdbc.db;
 
+import projeto_com_jdbc.db.exceptions.DbException;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
