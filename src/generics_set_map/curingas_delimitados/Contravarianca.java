@@ -11,12 +11,12 @@ public class Contravarianca {
         objects.add("Mario");
         objects.add("Leo");
 
-        List<? super Number> listNum = lisObjs;
-
-        listNum.add(10);
-        listNum.add(20);
-
-        Number x = listNum.get(0);
+//        List<? super Number> listNum = lisObjs;
+//
+//        listNum.add(10);
+//        listNum.add(20);
+//
+//        Number x = listNum.get(0);
 
     }
 }

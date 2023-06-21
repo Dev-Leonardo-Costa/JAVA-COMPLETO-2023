@@ -12,7 +12,7 @@ public class Covarianca {
         integerList.add(9);
         List<? extends Number> list = integerList;
         Number x = list.get(0);
-        list.add(20);
+//        list.add(20);
 
     }
 

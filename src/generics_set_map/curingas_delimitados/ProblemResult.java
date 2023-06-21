@@ -12,10 +12,10 @@ public class ProblemResult {
         List<Double> doubles = Arrays.asList(3.14, 5.15);
         List<Objects> objects = new ArrayList<Objects>();
 
-        copy(integers, objects);
-        printList(objects);
-        copy(doubles, objects);
-        printList(objects);
+//        copy(integers, objects);
+//        printList(objects);
+//        copy(doubles, objects);
+//        printList(objects);
 
     }
 
