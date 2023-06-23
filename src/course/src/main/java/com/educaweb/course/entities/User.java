@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tb_user")
+@Table(name = "db_user")
 public class User implements Serializable {
     private static final long serialVersionUI = 1L;
 
@@ -65,6 +65,7 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     @Override
     public boolean equals(Object o) {
