@@ -1,4 +1,4 @@
-package funcional_lambda.comparator;
+package programacao_funcional_lambda.comparator;
 
 import java.util.*;
 
