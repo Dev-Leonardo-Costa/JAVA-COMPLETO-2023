@@ -15,4 +15,6 @@ public class UserController {
         User user = new User(1L, "Leonardo", "leo@gmail.com","992370872","123456");
         return ResponseEntity.ok().body(user);
     }
+
+
 }
